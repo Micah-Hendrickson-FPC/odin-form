@@ -1,6 +1,47 @@
-img {
+:root {
+    --background-layer: -100;
+}
+
+.background {
+    z-index: var(--background-layer);
     max-height: 100vh;
     position: fixed;
     top: 0;
     left: 0;
+}
+
+body { 
+    margin: 0;
+    padding: 0;
+}
+
+.layout {
+    min-height: 100vh;
+    display: flex;
+}
+
+.sidebar {
+    flex: 3;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo {
+    margin-top: 35%;
+    background-color: #27262677
+}
+
+.content {
+    flex: 5;
+    background-color: #fafafa;
+    display: flex;
+    flex-direction: column;
+}
+
+.content-block {
+    flex: 1;
+}
+
+.form-inputs {
+    background-color: #fefefe;
 }
