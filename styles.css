@@ -11,8 +11,11 @@
     --emphasis-white: #fefefe;
     --invalid-red: #e71414;
     --valid-green: #008000;
+    --login-green: #145014;
     --selection-blue: #5050f5;
 }
+
+/*********************** General layout ***********************/
 
 .background {
     z-index: var(--background-layer);
@@ -31,6 +34,8 @@ body {
     min-height: 100vh;
     display: flex;
 }
+
+/*********************** Logo Sidebar ***********************/
 
 .sidebar {
     flex: 3;
@@ -54,11 +59,13 @@ body {
     margin: .5rem 6%;
 }
 
-.logo ~ *{
+.logo ~ * {
     margin-top: .5rem;
     margin-bottom: .5rem;
     margin-right: 4%;
 }
+
+/*********************** Main Content ***********************/
 
 .content {
     flex: 5;
@@ -71,6 +78,22 @@ body {
     flex: 1;
     display: flex;
 }
+
+/*********************** Header ***********************/
+
+.header {
+    align-items: center;
+}
+
+h1 {
+    font-size: 1.5rem;
+    line-height: 1.2em;
+    font-weight: 400;
+    padding: 0;
+    margin: 0 7%;
+}
+
+/*********************** Input Fields ***********************/
 
 .content-body {
     display: flex;
@@ -125,4 +148,39 @@ label {
     border: 2px solid var(--selection-blue);
     box-shadow: 2px 2px 1px var(--trans-grey);
     outline: none;
+}
+
+/*********************** Footer ***********************/
+
+.content-body + .content-block {
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.content-body + .content-block > * {
+    margin-left: 7%;
+}
+
+button[type="submit"] {
+    background-color: var(--login-green);
+    color: var(--emphasis-white);
+    border: none;
+    border-radius: 4px;
+    margin-top: 2rem;
+    padding: .5em 2em;
+    font-size: 1.2rem;
+    width: max(120px, 30%);
+}
+
+button[type="submit"] + span {  
+    margin-bottom: 2rem;
+}
+
+a {
+    color: var(--login-green);
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    text-decoration: underline;
 }
