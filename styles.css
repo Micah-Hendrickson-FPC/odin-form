@@ -40,8 +40,42 @@ body {
 
 .content-block {
     flex: 1;
+    display: flex;
+}
+
+.content-body {
+    display: flex;
+    flex-direction: column;
+    background-color: #fefefe;
+    box-shadow: 2px 5px 5px #27262677;
+    box-sizing: border-box;
+    align-items: baseline;
+}
+
+.content-body > * {
+    padding-top: 1rem;
+    padding-left: 7%;
+    padding-right: 1rem;
 }
 
 .form-inputs {
-    background-color: #fefefe;
+    display: flex;
+    gap: 0.8rem;
+    flex-wrap: wrap;
+}
+
+h2 {
+    margin: 0;
+    font-weight: 900;
+    font-size: 2rem;
+}
+
+label {
+    flex-basis: max(120px, 40%);
+    display: flex;
+    flex-direction: column;
+}
+
+.form-inputs input {
+    max-width: 80%;
 }
